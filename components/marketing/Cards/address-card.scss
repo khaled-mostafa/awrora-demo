@@ -1,0 +1,34 @@
+.paper {
+  padding: $spacing2;
+  display: flex;
+  h6 {
+    font-weight: $font-bold;
+  }
+  figure {
+    border-radius: $rounded-small;
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+    @include margin-right($spacing2);
+    img {
+      height: 100%;
+    }
+  }
+}
+
+.detail-info {
+  flex: 1;
+  overflow: hidden;
+}
+
+.btn {
+  &.v-btn {
+    margin-top: $spacing2;
+    height: 35px;
+  }
+}
+
+.icon {
+  color: $palette-primary-main;
+  @include margin-right($spacing1);
+}

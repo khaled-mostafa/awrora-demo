@@ -1,0 +1,76 @@
+<template>
+  <v-card class="address-card">
+    <div class="paper">
+      <figure>
+        <img :src="img" alt="clinic" />
+      </figure>
+      <div class="detail-info">
+        <h6 class="use-text-subtitle2 mb-6">
+          {{ name }}
+        </h6>
+        <v-row>
+          <v-col cols="12" md="6" class="px-2 py-1">
+            <v-icon class="icon primary--text">mdi-phone</v-icon>
+            {{ phone }}
+          </v-col>
+          <v-col cols="12" md="6" class="px-2 py-1">
+            <v-icon class="icon secondary--text">mdi-email</v-icon>
+            {{ email }}
+          </v-col>
+          <v-col cols="12" md="12" class="px-2 py-1">
+            <div class="text-truncate">
+              <v-icon class="icon accent--text">mdi-map-marker</v-icon>
+              {{ address }}
+            </div>
+          </v-col>
+        </v-row>
+        <v-btn
+          :href="link"
+          :elevation="0"
+          outlined
+          color="secondary"
+          block
+          small
+          class="btn"
+        >
+          Contact
+        </v-btn>
+      </div>
+    </div>
+  </v-card>
+</template>
+
+<style lang="scss" scoped>
+@import './address-card.scss';
+</style>
+
+<script>
+export default {
+  props: {
+    img: {
+      type: String,
+      required: true
+    },
+    name: {
+      type: String,
+      required: true
+    },
+    phone: {
+      type: String,
+      required: true
+    },
+    email: {
+      type: String,
+      required: true
+    },
+    address: {
+      type: String,
+      required: true
+    },
+    link: {
+      type: String,
+      default: '#'
+    }
+  }
+}
+</script>
